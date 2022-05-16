@@ -1,0 +1,462 @@
+.html_background {
+    background: #4f1e00 url("../img/fond.jpg") no-repeat center top;
+}
+
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.left {
+    justify-content: flex-end;
+    display: flex;
+}
+
+.left,
+.right {
+    width: 30%;
+}
+
+.center {
+    width: 33%;
+    height: 450px;
+    margin: auto;
+}
+
+.roue {
+    position: absolute;
+    margin-top: 2%;
+}
+
+#wheel {
+    transition: transform 5s cubic-bezier(.4, .8, .7, 1);
+    transform: rotate(0deg);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.wheel_questions {
+    height: 54vh;
+}
+
+#wheel2 {
+    top: 95px;
+    left: 131px;
+    transition: transform 5s cubic-bezier(.2, .5, .9, 1);
+    transform: rotate(0deg);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.wheel_equipes {
+    height: 28vh;
+}
+
+.wheel_centre {
+    height: 14vh;
+}
+
+.pos_equipes {
+    position: relative;
+    top: 14vh;
+    margin-left: 6.2vw;
+}
+
+.pos_centre {
+    position: relative;
+    top: 21.2vh;
+    margin-left: 9.7vw;
+}
+
+#center {
+    position: absolute;
+    z-index: 20;
+}
+
+#peg {
+    position: relative;
+    width: 1.3vw;
+    margin-left: 12.6vw;
+    margin-top: -15px;
+    z-index: 2;
+}
+
+.button {
+    font-size: 24px;
+    border-radius: 25px;
+    width: 220px;
+    height: 70px;
+    color: white;
+    background: #aa5924;
+    border: none;
+    display: inline-block;
+    margin: 25px;
+    z-index: 3;
+    border: 5px solid #4f1e00;
+}
+
+.button:hover,
+.button:focus,
+#button2:hover,
+#button2:focus {
+    background: #7d380e;
+}
+
+.equipes {
+    margin-top: 67px;
+    height: 50px;
+    background-color: #4f1e00;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    border-top: 2px solid white;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    width: 20%;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.question {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #4f1e00;
+    height: 200px;
+    width: 1349px;
+    padding-top: 25px;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+
+input[type=radio],
+input[type=checkbox] {
+    width: 18px;
+    height: 18px;
+}
+
+label {
+    font-size: 20px;
+    position: relative;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+.bravo {
+    z-index: 50;
+    color: white;
+    position: absolute;
+    width: 300px;
+    height: 80px;
+    font-size: 48px;
+    top: -250px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #4f1e00;
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+    padding-top: 20px;
+    text-align: center;
+    border: 3px solid white;
+    border-radius: 20px;
+}
+
+#bravo {
+    display: none;
+}
+
+.reponse {
+    text-align: left;
+    margin-left: 30px;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width:1024px) {
+
+    .button {
+        width: 170px;
+        font-size: 18px;
+        margin: 15px;
+    }
+
+    .left,
+    .right {
+        width: 31%;
+    }
+
+    .center {
+        width: 30%;
+        height: 270px;
+    }
+
+    .wheel_questions {
+        height: 300px;
+    }
+
+    .wheel_equipes {
+        height: 153px;
+    }
+
+    .wheel_centre {
+        height: 70px;
+    }
+
+    .pos_equipes {
+        top: 88px;
+        margin-left: 74px;
+    }
+
+    .pos_centre {
+        top: -34px;
+        margin-left: 116px;
+    }
+
+    #peg {
+        width: 18px;
+        margin-left: 141px;
+        top: -163px;
+    }
+
+    input[type=radio], input[type=checkbox] {
+        width: 13px;
+        height: 13px;
+    }
+    
+    .question {
+        font-size: 20px;
+        padding-top: 15px;
+        height: 270px;
+    }
+
+    .reponse {
+        font-size: 17px;
+    }
+
+    label {
+        font-size: 17px;
+    }
+
+    .equipes {
+        font-size: 20px;
+    }
+    
+}
+
+@media (min-width:1025px) and (max-width:1366px) {
+
+    .pos_equipes {
+        margin-left: 85px;
+        top: 85px;
+    }
+
+    .pos_centre {
+        margin-left: 135px;
+        top: -63px;
+    }
+
+    #peg {
+        margin-left: 167px;
+        top: -210px;
+    }
+
+    .roue {
+        margin-top: 15px;
+    }
+
+    .center {
+        height: 315px;
+        width: 26%;
+    }
+
+    .wheel_questions {
+        height: 350px;
+    }
+
+    .wheel_equipes {
+        height: 180px;
+    }
+
+    .wheel_centre {
+        height: 80px;
+    }
+
+    .left, .right {
+        width: 33%;
+    }
+
+    input[type=radio], input[type=checkbox] {
+        width: 13px;
+        height: 13px;
+    }
+    
+    .question {
+        font-size: 20px;
+        padding-top: 15px;
+        height: 270px;
+    }
+
+    .reponse {
+        font-size: 17px;
+    }
+
+    .button {
+        margin: 15px;
+        height: 60px;
+        width: 200px;
+        font-size: 18px;
+    }
+
+    label {
+        font-size: 17px;
+    }
+}
+
+
+@media (min-width: 1367px) and (max-width:1680px) {
+
+    .pos_equipes {
+        margin-left: 121px;
+        top: 121px;
+    }
+
+    .pos_centre {
+        margin-left: 190px;
+        top: -83px;
+    }
+
+    #peg {
+        margin-left: 236px;
+        top: -290px;
+    }
+
+    .roue {
+        margin-top: 15px;
+    }
+
+    .center {
+        height: 540px;
+        width: 30%;
+    }
+
+    .wheel_questions {
+        height: 494px;
+    }
+
+    .wheel_equipes {
+        height: 254px;
+    }
+
+    .wheel_centre {
+        height: 120px;
+    }
+
+    .left, .right {
+        width: 33%;
+    }
+
+}
+
+
+@media (min-width: 1681px) and (max-width:1920px) {
+
+    .pos_equipes {
+        margin-left: 121px;
+        top: 121px;
+    }
+
+    .pos_centre {
+        margin-left: 190px;
+        top: -83px;
+    }
+
+    #peg {
+        margin-left: 236px;
+        top: -290px;
+    }
+
+    .roue {
+        margin-top: 15px;
+    }
+
+    .center {
+        height: 540px;
+        width: 26%;
+    }
+
+    .wheel_questions {
+        height: 494px;
+    }
+
+    .wheel_equipes {
+        height: 254px;
+    }
+
+    .wheel_centre {
+        height: 120px;
+    }
+
+    .left, .right {
+        width: 36%;
+    }
+
+    .equipes {
+        width: 16%;
+    }
+}
+
+
+@media (min-width:1921px) {
+
+    .pos_equipes {
+        margin-left: 142px;
+        top: 142px;
+    }
+
+    .pos_centre {
+        margin-left: 220px;
+        top: -96px;
+    }
+
+    #peg {
+        margin-left: 276px;
+        top: -330px;
+    }
+
+    .roue {
+        margin-top: 15px;
+    }
+
+    .center {
+        height: 593px;
+        width: 23%;
+    }
+
+    .wheel_questions {
+        height: 580px;
+    }
+
+    .wheel_equipes {
+        height: 297px;
+    }
+
+    .wheel_centre {
+        height: 140px;
+    }
+
+    .left, .right {
+        width: 36%;
+    }
+
+    .equipes {
+        width: 16%;
+    }
+
+}

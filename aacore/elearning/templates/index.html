@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+    <div class="left">
+        <button class="button" id="button" onclick="spin_wheel()">Lancer la roue<br><span
+                style="font-weight:bold">QUESTIONS</span></button>
+    </div>
+
+    <div class="center">
+        <div class="roue">
+            <img src="{% static 'img/roue-question-02.png' %}" id="wheel" class="wheel_questions">
+        </div>
+        <div class="roue pos_equipes">
+            <img src="{% static 'img/roue-equipe-02.png' %}" id="wheel2" class="wheel_equipes">
+        </div>
+        <div class="roue pos_centre">
+            <img src="{% static 'img/centre-roue.png' %}" id="center" class="wheel_centre">
+        </div>
+        <div class="roue">
+            <img src="http://www.blimpage.com/pants/wheel_of_lunch_peg.svg" id="peg">
+        </div>
+
+        <audio autoplay="false" id="son1" src="{% static 'son/Roue.mp3'%}"></audio>
+        <audio autoplay="false" id="son_bravo" src="{% static 'son/Bravo.wav'%}"></audio>
+        <audio autoplay="false" id="son_splash" src="{% static 'son/Splash.wav'%}"></audio>
+
+    </div>
+
+    <div class="right">
+        <button class="button" id="button2" onclick="spin_wheel2()">Lancer la roue<br><span style="font-weight:bold">EQUIPES</span></button>
+    </div>
+
+</div>
+
+<div class="row">
+    <div style="width:42%"></div>
+    <div class="equipes">
+        <div id="equipes" style="display:none"></div>
+    </div>
+    <div style="width:42%"></div>
+</div>
+
+<div class="row" style="justify-content:center">
+    <div class="question">
+        <div id="question1" style="display:none">
+            Placebo en latin signifie "je plairai"<br>
+            <input type="radio" name="radio" id="vrai">
+            <label for="vrai">VRAI</label>
+            <br>
+            <input type="radio" name="radio" id="faux">
+            <label>FAUX</label>
+        </div>
+        <!-- Réponse à la question -->
+        <div class="reponse" id="reponse1" style="display:none">
+            Un placebo (du latin placebo : « je plairai », de placeo : « je plais ») est un procédé thérapeutique n'ayant pas d'efficacité
+            propre ou spécifique mais agissant sur le patient par des mécanismes psychologiques et physiologiques
+        </div>
+
+        <div id="question2" style="display:none">
+            Une étude "randomisée" peut-être...<br>
+            <div style="text-align: left; width: 20%; margin: auto; font-size: 20px;">
+                <input type="checkbox" name="q2"> En ouvert
+                <br>
+                <input type="checkbox" name="q2"> En simple aveugle
+                <br>
+                <input type="checkbox" name="q2"> En double aveugle
+            </div>
+        </div>
+        <!-- Réponse à la question -->
+        <div class="reponse" id="reponse2v" style="display:none">
+            Bravo : tout est possible en effet.
+        </div>
+        <div class="reponse" id="reponse2f" style="display:none">
+            Aïe ! La randomisation signifie simplement que les patients sont tirés au sort pour constituer des groupes
+            que l'on espère comparables en terme de
+            caractéristiques initiales. Il fallait donc cocher les 3 propositions...
+        </div>
+
+
+        <div class="row" style="justify-content:center">
+            <button class="button" id="valid" onclick="valider()" style="width:300px; height:45px; display:none">Valider
+                votre réponse</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Bravo !! -->
+<div class="bravo" id="bravo">Bravo !!
+</div>
+
+{% endblock content %}
